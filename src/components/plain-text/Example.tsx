@@ -53,26 +53,28 @@ const Placeholder = () => {
   return <div className="editor-placeholder">Enter some plain text...</div>;
 };
 
-const PlainEditor: React.FC = () => {
-  const initialConfig = {
-    namespace: "PlainEditor",
-    theme: ExampleTheme,
-    onError,
-  };
+const initialConfig = {
+  namespace: "PlainEditor",
+  theme: ExampleTheme,
+  onError,
+};
 
+const PlainEditor: React.FC = () => {
   return (
-    <LexicalComposer initialConfig={initialConfig}>
-      <div className="editor-container">
-        <PlainTextPlugin
-          contentEditable={<ContentEditable className="editor-input" />}
-          placeholder={<Placeholder />}
-          ErrorBoundary={LexicalErrorBoundary}
-        />
-        <OnChangePlugin onChange={onChange} />
-        <HistoryPlugin />
-        <MyCustomAutoFocusPlugin />
-      </div>
-    </LexicalComposer>
+    <div className="plain-text-example">
+      <LexicalComposer initialConfig={initialConfig}>
+        <div className="editor-container">
+          <PlainTextPlugin
+            contentEditable={<ContentEditable className="editor-input" />}
+            placeholder={<Placeholder />}
+            ErrorBoundary={LexicalErrorBoundary}
+          />
+          <OnChangePlugin onChange={onChange} />
+          <HistoryPlugin />
+          <MyCustomAutoFocusPlugin />
+        </div>
+      </LexicalComposer>
+    </div>
   );
 };
 
