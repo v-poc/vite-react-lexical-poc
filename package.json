@@ -1,6 +1,6 @@
 {
   "name": "vite-react-lexical-poc",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Web content editor POC based on React and Lexical",
   "type": "module",
   "author": "Niko Ni",

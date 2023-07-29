@@ -60,10 +60,10 @@ export default defineConfig<ThemeConfig>({
             text: "Experimental",
             icon: "lucide:slack",
             items: [
-              // {
-              //   text: "Rich Text Editor",
-              //   link: "/en/rich-editor/",
-              // },
+              {
+                text: "Rich Text Editor",
+                link: "/en/rich-editor/",
+              },
               {
                 text: "Plain Text",
                 link: "/en/plain-text/",
