@@ -1,7 +1,7 @@
 {
   "name": "vite-react-lexical-poc",
-  "private": true,
   "version": "0.1.0",
+  "description": "Web content editor POC based on React and Lexical",
   "type": "module",
   "author": "Niko Ni",
   "license": "MIT",

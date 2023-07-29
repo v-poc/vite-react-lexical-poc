@@ -10,7 +10,7 @@ export default defineConfig<ThemeConfig>({
     locale: "en-US",
     localeText: "English",
     title: "Lexical-react",
-    description: "Web content editor based on React and Lexical",
+    description: "Web content editor POC based on React and Lexical",
     docsRepo: "v-poc/vite-react-lexical-poc",
     docsBranch: "main",
     editLink: true,
