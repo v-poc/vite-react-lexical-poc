@@ -7,10 +7,13 @@ import { HistoryPlugin } from "@lexical/react/LexicalHistoryPlugin";
 import { OnChangePlugin } from "@lexical/react/LexicalOnChangePlugin";
 import { useLexicalComposerContext } from "@lexical/react/LexicalComposerContext";
 import LexicalErrorBoundary from "@lexical/react/LexicalErrorBoundary";
+import "./index.css";
 
-// const theme = {
-//   // Theme styling goes here...
-// };
+const ExampleTheme = {
+  // Theme styling
+  placeholder: "editor-placeholder",
+  paragraph: "editor-paragraph",
+};
 
 // When the editor changes, you can get notified via the
 // LexicalOnChangePlugin!
@@ -20,7 +23,7 @@ function onChange(editorState: any) {
     const root = $getRoot();
     const selection = $getSelection();
 
-    console.log(root, selection);
+    console.log("onChange", root, selection);
   });
 }
 
@@ -46,25 +49,31 @@ function onError(error: Error) {
   console.error(error);
 }
 
-const Editor: React.FC = () => {
+const Placeholder = () => {
+  return <div className="editor-placeholder">Enter some plain text...</div>;
+};
+
+const PlainEditor: React.FC = () => {
   const initialConfig = {
-    namespace: "MyEditor",
-    // theme,
+    namespace: "PlainEditor",
+    theme: ExampleTheme,
     onError,
   };
 
   return (
     <LexicalComposer initialConfig={initialConfig}>
-      <PlainTextPlugin
-        contentEditable={<ContentEditable />}
-        placeholder={<div>Enter some text...</div>}
-        ErrorBoundary={LexicalErrorBoundary}
-      />
-      <OnChangePlugin onChange={onChange} />
-      <HistoryPlugin />
-      <MyCustomAutoFocusPlugin />
+      <div className="editor-container">
+        <PlainTextPlugin
+          contentEditable={<ContentEditable className="editor-input" />}
+          placeholder={<Placeholder />}
+          ErrorBoundary={LexicalErrorBoundary}
+        />
+        <OnChangePlugin onChange={onChange} />
+        <HistoryPlugin />
+        <MyCustomAutoFocusPlugin />
+      </div>
     </LexicalComposer>
   );
 };
 
-export default Editor;
+export default PlainEditor;

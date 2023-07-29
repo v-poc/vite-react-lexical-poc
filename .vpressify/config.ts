@@ -9,7 +9,7 @@ export default defineConfig<ThemeConfig>({
   themeConfig: {
     locale: "en-US",
     localeText: "English",
-    title: "Lexical.react",
+    title: "Lexical-react",
     description: "Web content editor based on React and Lexical",
     docsRepo: "v-poc/vite-react-lexical-poc",
     docsBranch: "main",
@@ -19,18 +19,18 @@ export default defineConfig<ThemeConfig>({
         locale: "en-US",
         localeText: "English",
         nav: [
-          {
-            text: "Playground",
-            icon: "tabler:ghost",
-            link: "/en/playground/",
-          },
+          // {
+          //   text: "Playground",
+          //   icon: "tabler:ghost",
+          //   link: "/en/playground/",
+          // },
           {
             text: "Links",
-            icon: "tabler:mood-smile",
+            icon: "lucide:link",
             items: [
               {
                 text: "Lexical.dev",
-                icon: "tabler:bolt",
+                icon: "lucide:clipboard-edit",
                 link: "https://lexical.dev/",
               },
               {
@@ -60,18 +60,18 @@ export default defineConfig<ThemeConfig>({
             text: "Experimental",
             icon: "lucide:slack",
             items: [
-              {
-                text: "Rich Text Editor",
-                link: "/en/rich-editor/",
-              },
+              // {
+              //   text: "Rich Text Editor",
+              //   link: "/en/rich-editor/",
+              // },
               {
                 text: "Plain Text",
                 link: "/en/plain-text/",
               },
-              {
-                text: "Playground",
-                link: "/en/playground/",
-              },
+              // {
+              //   text: "Playground",
+              //   link: "/en/playground/",
+              // },
             ],
           },
         ],
