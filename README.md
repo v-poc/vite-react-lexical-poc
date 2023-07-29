@@ -1,27 +1,41 @@
-# React + TypeScript + Vite
+# vite-react-lexical-poc
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+**Lexical** - An extensible text editor framework that does things differently:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Reliable
+  - Lexical is comprised of editor instances that each attach to a single content editable element. A set of editor states represent the current and pending states of the editor at any given time.
+- Accessible
+  - Lexical is designed for everyone. It follows best practices established in WCAG and is compatible with screen readers and other assistive technologies.
+- Fast
+  - Lexical is minimal. It doesn't directly concern itself with UI components, toolbars or rich-text features and markdown. The logic for these features can be included via a plugin interface.
 
-## Expanding the ESLint configuration
+## Project setup
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Install dependencies
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```bash
+$ npm i
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Start the dev server for `docs-dev`
+
+```bash
+$ npm start
+```
+
+Build documentation (docs+demos)
+
+```bash
+$ npm run build-docs
+```
+
+## License
+
+<img
+  src="https://nikoni.top/images/niko-mit-react.png"
+  alt="MIT License"
+  width="396"
+  height="250"
+/>
